@@ -10,7 +10,7 @@
     "mainColor": "#20328d",
     "itemColor": "rgb(44, 67, 186)",
     "btnView": "#ffff",
-    "gradientMobile": "linear-gradient(to Top, rgb(0, 74, 173,1),rgb(0, 74, 173, 0))"
+    "gradientMobile": "linear-gradient(to Top, rgb(32, 50, 141,1),rgb(32, 50, 141, 0))"
 
   },
   {
@@ -37,7 +37,7 @@
     "mainColor": "#b6d5f0",
     "itemColor": "rgb(107, 170, 225)",
     "btnView": "#333",
-    "gradientMobile": "linear-gradient(to Top, rgb(0, 74, 173,1),rgb(0, 74, 173, 0))"
+    "gradientMobile": "linear-gradient(to Top, rgb(182, 213, 240,1),rgb(182, 213, 240, 0))"
   },
   {
     "id": "temoin-4",
@@ -50,7 +50,7 @@
     "mainColor": "#f9a22d",
     "itemColor": "rgb(223, 129, 7)",
     "btnView": "#ffff",
-    "gradientMobile": "linear-gradient(to Top, rgb(209, 84, 79,1),rgb(209, 84, 79, 0))"
+    "gradientMobile": "linear-gradient(to Top, rgb(249, 162, 45,1),rgb(249, 162, 45, 0))"
   },
   {
     "id": "temoin-5",
@@ -63,7 +63,7 @@
     "mainColor": "#6b9540",
     "itemColor": "rgb(102, 143, 61)",
     "btnView": "#ffff",
-    "gradientMobile": "linear-gradient(to Top, rgb(37, 62, 159,1),rgb(37, 62, 159, 0))"
+    "gradientMobile": "linear-gradient(to Top, rgb(107, 149, 64,1),rgb(107, 149, 64, 0))"
   },
   {
     "id": "temoin-6",
@@ -76,7 +76,7 @@
     "mainColor": "#89b164",
     "itemColor": "rgb(113, 153, 77)",
     "btnView": "#ffff",
-    "gradientMobile": "linear-gradient(to Top, rgb(120, 162, 85,1),rgb(120, 162, 85, 0))"
+    "gradientMobile": "linear-gradient(to Top, rgb(137, 177, 100,1),rgb(137, 177, 100, 0))"
   },
   {
     "id": "temoin-7",
@@ -115,7 +115,7 @@
     "mainColor": "#04647b",
     "itemColor": "rgb(5, 140, 173)",
     "btnView": "#ffff",
-    "gradientMobile": "linear-gradient(to Top, rgb(66, 163, 203,1),rgb(66, 163, 203, 0))"
+    "gradientMobile": "linear-gradient(to Top, rgb(4, 100, 123,1),rgb(4, 100, 123, 0))"
   },
   {
     "id": "temoin-10",
@@ -128,7 +128,7 @@
     "mainColor": "#004aad",
     "itemColor": "rgb(0, 99, 230)",
     "btnView": "#ffff",
-    "gradientMobile": "linear-gradient(to Top, rgb(91, 165, 240,1),rgb(91, 165, 240, 0))"
+    "gradientMobile": "linear-gradient(to Top, rgb(0, 74, 173,1),rgb(0, 74, 173, 0))"
   },
   {
     "id": "temoin-11",
