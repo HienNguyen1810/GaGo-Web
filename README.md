@@ -1,1 +1,1 @@
-# GaGo-Web
+# Gago
