@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+  <script defer src="./assets/js/load-temoin.js" type="text/javascript"></script>
 
   <script defer type="text/javascript">
     !(function (o, c) {
@@ -536,7 +537,7 @@
               const newCenterItemId = closestItem
                 ? closestItem.getAttribute("data-temoin")
                 : 1;
-             
+
               if (newCenterItemId !== currentCenterItemId) {
                 currentCenterItemId = newCenterItemId;
 
@@ -549,13 +550,13 @@
                 if (newCenterItemId) {
                   for (let i = 1; i <= 11; i++) {
                     const temoinDiv = document.getElementById(`temoin-${i}`);
-                    
+
                     setTimeout(() => {
                       temoinDiv.style.display =
                         i.toString() === newCenterItemId ? "block" : "none";
                     }, 170);
 
-                    $.getJSON("./assets/data/data.json", (temoins) => {
+
                     document.querySelectorAll('.side.droite').forEach(function (element) {
                       // Lấy màu sắc tương ứng với newCenterItemId, hoặc 'red' nếu không có ánh xạ
                       const color = temoins[newCenterItemId - 1].mainColor;
@@ -563,111 +564,46 @@
                       // Đặt thuộc tính background-color của phần tử
                       element.style.cssText = 'background: ' + color + '!important';
                     });
-                  })
-
-                    // const colorMap = {
-                    //   1: '#004aad',
-                    //   2: '#7b0b00',
-                    //   3: '#004aad',
-                    //   4: '#d1544f',
-                    //   5: '#253e9f',
-                    //   6: '#78a255',
-                    //   7: '#c2a16a',
-                    //   8: '#c41a21',
-                    //   9: '#42a3cb',
-                    //   10: '#5ba5f0',
-                    //   11: '#f9a22d',
-                    //   default: 'red'
-                    // };
-
-                    // // Lặp qua tất cả các phần tử '.side.droite'
-                    // document.querySelectorAll('.side.droite').forEach(function (element) {
-                    //   // Lấy màu sắc tương ứng với newCenterItemId, hoặc 'red' nếu không có ánh xạ
-                    //   const color = colorMap[newCenterItemId] || colorMap.default;
-
-                    //   // Đặt thuộc tính background-color của phần tử
-                    //   element.style.cssText = 'background: ' + color + '!important';
-                    // });
 
 
-                    const colorMap1 = {
-                      1: 'rgb(0, 55, 128)',
-                      2: 'rgb(107, 14, 5)',
-                      3: 'rgb(0, 66, 153)',
-                      4: 'rgb(203, 57, 52)',
-                      5: 'rgb(44, 72, 186)',
-                      6: 'rgb(113, 156, 78)',
-                      7: 'rgb(191, 155, 96)',
-                      8: 'rgb(181, 22, 28)',
-                      9: 'rgb(49, 141, 180)',
-                      10: 'rgb(80, 154, 230)',
-                      11: 'rgb(230, 149, 41)',
-                      default: 'red'
-                    };
 
                     // Lặp qua tất cả các phần tử '.header-link'
                     document.querySelectorAll('.header-link').forEach(function (element) {
                       // Lấy màu sắc tương ứng với newCenterItemId, hoặc 'red' nếu không có ánh xạ
-                      const color = colorMap1[newCenterItemId] || colorMap1.default;
+                      const color = temoins[newCenterItemId - 1].itemColor;
 
                       // Đặt thuộc tính background-color của phần tử
                       element.style.cssText = 'background: ' + color + '!important';
                     });
-                    const colorMap3 = {
-                      1: 'rgb(0, 55, 128)',
-                      2: 'rgb(107, 14, 5)',
-                      3: 'rgb(0, 66, 153)',
-                      4: 'rgb(203, 57, 52)',
-                      5: 'rgb(44, 72, 186)',
-                      6: 'rgb(113, 156, 78)',
-                      7: 'rgb(191, 155, 96)',
-                      8: 'rgb(181, 22, 28)',
-                      9: 'rgb(49, 141, 180)',
-                      10: 'rgb(80, 154, 230)',
-                      11: 'rgb(230, 149, 41)',
-                      default: 'red'
-                    };
 
-                    if (window.innerWidth > 767)  {
-                    // Lặp qua tất cả các phần tử '.header-link'
-                    document.querySelectorAll('.texte-temoin').forEach(function (element) {
-                      // Lấy màu sắc tương ứng với newCenterItemId, hoặc 'red' nếu không có ánh xạ
-                      const color = colorMap1[newCenterItemId] || colorMap1.default;
 
-                      // Đặt thuộc tính background-color của phần tử
-                      element.style.cssText = 'color: ' + color + '!important';
-                    });
+                    if (window.innerWidth > 767) {
+                      // Lặp qua tất cả các phần tử '.header-link'
+                      document.querySelectorAll('.texte-temoin').forEach(function (element) {
+                        // Lấy màu sắc tương ứng với newCenterItemId, hoặc 'red' nếu không có ánh xạ
+                        const color = temoins[newCenterItemId - 1].itemColor;
+
+                        // Đặt thuộc tính background-color của phần tử
+                        element.style.cssText = 'color: ' + color + '!important';
+                      });
                       // Lặp qua tất cả các phần tử '.header-link'
                       document.querySelectorAll('.titre-temoin').forEach(function (element) {
-                      // Lấy màu sắc tương ứng với newCenterItemId, hoặc 'red' nếu không có ánh xạ
-                      const color = colorMap1[newCenterItemId] || colorMap1.default;
+                        // Lấy màu sắc tương ứng với newCenterItemId, hoặc 'red' nếu không có ánh xạ
+                        const color = temoins[newCenterItemId - 1].itemColor;
 
-                      // Đặt thuộc tính background-color của phần tử
-                      element.style.cssText = 'color: ' + color + '!important';
-                    });
-                  }
+                        // Đặt thuộc tính background-color của phần tử
+                        element.style.cssText = 'color: ' + color + '!important';
+                      });
+                    }
                     if (window.innerWidth <= 479) {
                       // Chỉ thực hiện khi chiều rộng của màn hình là 479px hoặc ít hơn
                       // Thêm mã JavaScript của bạn ở đây
-                      const gradientMap = {
-                        1: 'linear-gradient(to Top, rgb(0, 74, 173,1),rgb(230, 241, 255, 0.5))',
-                        2: 'linear-gradient(to Top, rgb(123, 11, 0,1),rgb(255, 232, 230, 0.5))',
-                        3: 'linear-gradient(to Top, rgb(0, 74, 173,1),rgb(230, 241, 255, 0.5))',
-                        4: 'linear-gradient(to Top, rgb(209, 84, 79,1),rgb(250, 234, 234, 0.5))',
-                        5: 'linear-gradient(to Top, rgb(37, 62, 159,1),rgb(193, 203, 240, 0.5))',
-                        6: 'linear-gradient(to Top, rgb(120, 162, 85,1),rgb(229, 237, 222, 0.5))',
-                        7: 'linear-gradient(to Top, rgb(194, 161, 106,1),rgb(240, 232, 219, 0.5))',
-                        8: 'linear-gradient(to Top, rgb(196, 26, 33,1),rgb(252, 232, 233, 0.5))',
-                        9: 'linear-gradient(to Top, rgb(66, 163, 203,1),rgb(215, 235, 244, 0.5))',
-                        10: 'linear-gradient(to Top, rgb(91, 165, 240,1),rgb(208, 230, 251, 0.5))',
-                        11: 'linear-gradient(to Top, rgb(249, 162, 45,1),rgb(252, 221, 182, 0.5))',
-                        default: 'red'
-                      };
+
 
                       // Lặp qua tất cả các phần tử '.bloc-text'
                       document.querySelectorAll('.bloc-text').forEach(function (element) {
                         // Lấy linear-gradient tương ứng với newCenterItemId, hoặc 'red' nếu không có ánh xạ
-                        const gradient = gradientMap[newCenterItemId] || gradientMap.default;
+                        const gradient = temoins[newCenterItemId - 1].gradientMobile;
 
                         // Đặt thuộc tính background của phần tử
                         element.style.cssText = 'background: ' + gradient + '!important';
@@ -676,29 +612,15 @@
 
 
                     }
-                    // Đối tượng ánh xạ giữa newCenterItemId và màu sắc
-                    const colorMap2 = {
-                      1: 'rgb(0, 55, 128)',
-                      2: 'rgb(107, 14, 5)',
-                      3: 'rgb(0, 66, 153)',
-                      4: 'rgb(203, 57, 52)',
-                      5: 'rgb(44, 72, 186)',
-                      6: 'rgb(113, 156, 78)',
-                      7: 'rgb(191, 155, 96)',
-                      8: 'rgb(181, 22, 28)',
-                      9: 'rgb(49, 141, 180)',
-                      10: 'rgb(80, 154, 230)',
-                      11: 'rgb(230, 149, 41)',
-                      default: 'red'
-                    };
+
 
                     // Lặp qua tất cả các phần tử '.contact-message'
                     document.querySelectorAll('.contact-message').forEach(function (element) {
                       // Lấy màu sắc từ đối tượng colorMap
-                      const color = colorMap2[newCenterItemId] || colorMap2.default;
+                      const color = temoins[newCenterItemId - 1].itemColor;
                       // Đặt thuộc tính cssText của phần tử
                       element.style.cssText = `background: ${color} !important`;
-                      
+
                     });
 
 
@@ -714,18 +636,18 @@
               const scrollHeight = container.scrollHeight;
               const clientHeight = container.clientHeight;
               if (windowWidth >= 992) {
-                if (scrollTop < itemHeight * 2.5 +30) {
-        const lastItem = container.children[container.children.length - 1];
-        container.insertBefore(lastItem, container.firstChild);
-        
-        // Tính toán lại giá trị scrollTop để đảm bảo cuộn lên không bị đứng
-        container.scrollTop += lastItem.offsetHeight; // Sử dụng offsetHeight của phần tử cuối cùng
-    }else if (scrollTop + clientHeight >= scrollHeight - (itemHeight+25)) {
-        const firstItem = container.children[0];
-        container.appendChild(firstItem);
-        container.scrollTop += itemHeight; // Thay đổi dấu +
-    }
-}else {
+                if (scrollTop < itemHeight * 2.5 + 30) {
+                  const lastItem = container.children[container.children.length - 1];
+                  container.insertBefore(lastItem, container.firstChild);
+
+                  // Tính toán lại giá trị scrollTop để đảm bảo cuộn lên không bị đứng
+                  container.scrollTop += lastItem.offsetHeight; // Sử dụng offsetHeight của phần tử cuối cùng
+                } else if (scrollTop + clientHeight >= scrollHeight - (itemHeight + 25)) {
+                  const firstItem = container.children[0];
+                  container.appendChild(firstItem);
+                  container.scrollTop += itemHeight; // Thay đổi dấu +
+                }
+              } else {
                 if (scrollTop < itemHeight * 2) {
                   const lastItem =
                     container.children[container.children.length - 1];
@@ -779,7 +701,7 @@
               if (windowWidth > 992) {
                 e.deltaY = e.deltaY >= 0 ? 33.33333129882813 : -33.33333129882813;
                 linesToScroll = e.deltaY >= 0 ? 33.33333129882813 : -33.33333129882813;
-console.log(linesToScroll,"linesToScroll");
+                console.log(linesToScroll, "linesToScroll");
               } else {
                 linesToScroll = e.deltaY
               }
@@ -1039,7 +961,7 @@ console.log(linesToScroll,"linesToScroll");
           arrow.classList.add("rotated");
         });
       }
-    // Chức năng thay đổi ngôn ngữ
+      // Chức năng thay đổi ngôn ngữ
       $.getJSON("./assets/data/dataLanguage.json", (languageOptions) => {
         let elements = {
           languageSelect: document.getElementById("languageSelect"),
@@ -1062,77 +984,77 @@ console.log(linesToScroll,"linesToScroll");
           engProposalElement: document.querySelector(".download-proposal-vietnamese"),
           vnProposalElement: document.querySelector(".download-proposal-english")
         };
-    // Hàm thay đổi ngôn ngữ
-    function updateContent(language) {
-        var languageData = languageOptions[language];
+        // Hàm thay đổi ngôn ngữ
+        function updateContent(language) {
+          var languageData = languageOptions[language];
 
-        // Thay đổi ngôn ngữ cho từng nút view more
-        elements.viewMoreElements.forEach(function (element) {
-          element.textContent = languageData.ghCreation.buttonView;
-        });
+          // Thay đổi ngôn ngữ cho từng nút view more
+          elements.viewMoreElements.forEach(function (element) {
+            element.textContent = languageData.ghCreation.buttonView;
+          });
 
-        // Thay đổi nội dung của các phần tử khác
-        for (var key in elements) {
-          if (key.endsWith('Element')) {
-            var contentKey = key.replace('Element', '');
-            if (languageData[contentKey]) {
-              elements[key].textContent = languageData[contentKey][contentKey + 'Content'];
+          // Thay đổi nội dung của các phần tử khác
+          for (var key in elements) {
+            if (key.endsWith('Element')) {
+              var contentKey = key.replace('Element', '');
+              if (languageData[contentKey]) {
+                elements[key].textContent = languageData[contentKey][contentKey + 'Content'];
+              }
             }
           }
+
+          // Thay đổi nội dung của các phần tử download proposal
+          elements.downloadProposalElement.textContent = languageData.downloadProposal.downloadProposalText;
+          elements.vnProposalElement.textContent = languageData.downloadProposal.vnProposalText;
+          elements.engProposalElement.textContent = languageData.downloadProposal.engProposalText;
         }
 
-        // Thay đổi nội dung của các phần tử download proposal
-        elements.downloadProposalElement.textContent = languageData.downloadProposal.downloadProposalText;
-        elements.vnProposalElement.textContent = languageData.downloadProposal.vnProposalText;
-        elements.engProposalElement.textContent = languageData.downloadProposal.engProposalText;
-      }
+        function getFlagBySelect(enSVG, parentNode) {
+          var svgElement = parentNode.querySelector('svg');
+          var spanElement = parentNode.querySelector('span')
+          parentNode.removeChild(svgElement);
+          let parser = new DOMParser();
+          const html = parser.parseFromString(enSVG, 'text/html');
+          parentNode.insertBefore(html.body.firstElementChild, spanElement)
 
-      function getFlagBySelect(enSVG, parentNode) {
-        var svgElement = parentNode.querySelector('svg');
-        var spanElement = parentNode.querySelector('span')
-        parentNode.removeChild(svgElement);
-        let parser = new DOMParser();
-        const html = parser.parseFromString(enSVG, 'text/html');
-        parentNode.insertBefore(html.body.firstElementChild, spanElement)
+        }
 
-      }
+        engLanguage.addEventListener("click", function () {
+          var enSVG = '<svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_45_691)"><mask id="mask0_45_691" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="15"><path d="M19 0H2C0.89543 0 0 0.89543 0 2V13C0 14.1046 0.89543 15 2 15H19C20.1046 15 21 14.1046 21 13V2C21 0.89543 20.1046 0 19 0Z" fill="white"/></mask><g mask="url(#mask0_45_691)"><path d="M19 0H2C0.89543 0 0 0.89543 0 2V13C0 14.1046 0.89543 15 2 15H19C20.1046 15 21 14.1046 21 13V2C21 0.89543 20.1046 0 19 0Z" fill="#22438B"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3 1L0.973999 1.026L0.999999 3L17.982 14.028L20.019 13.991L19.981 12.029L3 1Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2 1L1 2L19 14L20 13L2 1Z" fill="#C7152A"/><path fill-rule="evenodd" clip-rule="evenodd" d="M18 1H20V3C20 3 8.24999 10.396 3.01799 14.028C2.95499 14.072 1.01999 14.031 1.01999 14.031L0.86499 12.13L18 1Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M19.043 0.971924L20 1.99992L2 13.9999L1 12.9999L19.043 0.971924Z" fill="#C7152A"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1H13V5H20V10H13V14H8V10H1V5H8V1Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M9 1H12V6H20V9H12V14H9V9H1V6H9V1Z" fill="#C7152A"/><path d="M19 0.5H2C1.17157 0.5 0.5 1.17157 0.5 2V13C0.5 13.8284 1.17157 14.5 2 14.5H19C19.8284 14.5 20.5 13.8284 20.5 13V2C20.5 1.17157 19.8284 0.5 19 0.5Z" stroke="black" stroke-opacity="0.1"/></g></g><defs><clipPath id="clip0_45_691"><rect width="21" height="15" fill="white"/></clipPath></defs></svg>';
+          var selectedLanguage = engLanguage.getAttribute("value");
+          getFlagBySelect(enSVG, selectedAll?.[0]);
+          updateContent(selectedLanguage);
+        });
 
-      engLanguage.addEventListener("click", function () {
-        var enSVG = '<svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_45_691)"><mask id="mask0_45_691" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="15"><path d="M19 0H2C0.89543 0 0 0.89543 0 2V13C0 14.1046 0.89543 15 2 15H19C20.1046 15 21 14.1046 21 13V2C21 0.89543 20.1046 0 19 0Z" fill="white"/></mask><g mask="url(#mask0_45_691)"><path d="M19 0H2C0.89543 0 0 0.89543 0 2V13C0 14.1046 0.89543 15 2 15H19C20.1046 15 21 14.1046 21 13V2C21 0.89543 20.1046 0 19 0Z" fill="#22438B"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3 1L0.973999 1.026L0.999999 3L17.982 14.028L20.019 13.991L19.981 12.029L3 1Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2 1L1 2L19 14L20 13L2 1Z" fill="#C7152A"/><path fill-rule="evenodd" clip-rule="evenodd" d="M18 1H20V3C20 3 8.24999 10.396 3.01799 14.028C2.95499 14.072 1.01999 14.031 1.01999 14.031L0.86499 12.13L18 1Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M19.043 0.971924L20 1.99992L2 13.9999L1 12.9999L19.043 0.971924Z" fill="#C7152A"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1H13V5H20V10H13V14H8V10H1V5H8V1Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M9 1H12V6H20V9H12V14H9V9H1V6H9V1Z" fill="#C7152A"/><path d="M19 0.5H2C1.17157 0.5 0.5 1.17157 0.5 2V13C0.5 13.8284 1.17157 14.5 2 14.5H19C19.8284 14.5 20.5 13.8284 20.5 13V2C20.5 1.17157 19.8284 0.5 19 0.5Z" stroke="black" stroke-opacity="0.1"/></g></g><defs><clipPath id="clip0_45_691"><rect width="21" height="15" fill="white"/></clipPath></defs></svg>';
-        var selectedLanguage = engLanguage.getAttribute("value");
-        getFlagBySelect(enSVG, selectedAll?.[0]);
-        updateContent(selectedLanguage);
+        viLanguage.addEventListener("click", function () {
+          let vnSVG = '<svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_45_683)"><mask id="mask0_45_683" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="15"><path d="M19 0H2C0.89543 0 0 0.89543 0 2V13C0 14.1046 0.89543 15 2 15H19C20.1046 15 21 14.1046 21 13V2C21 0.89543 20.1046 0 19 0Z" fill="white"/></mask><g mask="url(#mask0_45_683)"><path d="M19 0H2C0.89543 0 0 0.89543 0 2V13C0 14.1046 0.89543 15 2 15H19C20.1046 15 21 14.1046 21 13V2C21 0.89543 20.1046 0 19 0Z" fill="#DC220D"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10.502 9.33L8.41201 10.43L8.81201 8.103L7.12201 6.456L9.45801 6.116L10.502 4L11.547 6.116L13.882 6.456L12.192 8.103L12.592 10.429" fill="#FFFF00"/><path d="M19 0.5H2C1.17157 0.5 0.5 1.17157 0.5 2V13C0.5 13.8284 1.17157 14.5 2 14.5H19C19.8284 14.5 20.5 13.8284 20.5 13V2C20.5 1.17157 19.8284 0.5 19 0.5Z" stroke="black" stroke-opacity="0.1"/></g></g><defs><clipPath id="clip0_45_683"><rect width="21" height="15" fill="white"/></clipPath></defs></svg>'
+          var selectedLanguage = viLanguage.getAttribute("value");
+          getFlagBySelect(vnSVG, selectedAll?.[0])
+          updateContent(selectedLanguage);
+        });
+
+        cnLanguage.addEventListener("click", function () {
+          let cnSVG = '<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2_2819)"><g clip-path="url(#clip1_2_2819)"><rect width="22" height="16" rx="2" fill="#F93939"/><path d="M19.9048 0H2.09524C0.93807 0 0 0.955126 0 2.13333V13.8667C0 15.0449 0.93807 16 2.09524 16H19.9048C21.0619 16 22 15.0449 22 13.8667V2.13333C22 0.955126 21.0619 0 19.9048 0Z" fill="#F93939"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.75993 7.712L4.21993 8.53653L4.51326 6.7904L3.26869 5.55306L4.98993 5.30026L5.75993 3.71093L6.52888 5.30026L8.25012 5.55306L7.00345 6.7904L7.29888 8.53546L5.75993 7.712ZM9.42869 3.2H10.4763V4.26666H9.42869V3.2ZM10.4763 5.33333H11.5239V6.4H10.4763V5.33333ZM10.4763 7.46666H11.5239V8.53333H10.4763V7.46666ZM9.42869 9.6H10.4763V10.6667H9.42869V9.6Z" fill="#FFDA2C"/></g></g><defs><clipPath id="clip0_2_2819"><rect width="22" height="16" fill="white"/></clipPath><clipPath id="clip1_2_2819"><rect width="22" height="16" rx="2" fill="white"/></clipPath></defs></svg>'
+          var selectedLanguage = cnLanguage.getAttribute("value");
+          getFlagBySelect(cnSVG, selectedAll?.[0])
+          updateContent(selectedLanguage);
+        });
+
+
+        // Sử dụng sự kiện "input" để lắng nghe sự thay đổi liên tục của dropdown
+        languageSelect.addEventListener("input", function () {
+          var selectedLanguage = languageSelect.value;
+          updateContent(selectedLanguage);
+        });
+
+        updateContent(languageSelect.textContent.toLowerCase());
       });
 
-      viLanguage.addEventListener("click", function () {
-        let vnSVG = '<svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_45_683)"><mask id="mask0_45_683" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="15"><path d="M19 0H2C0.89543 0 0 0.89543 0 2V13C0 14.1046 0.89543 15 2 15H19C20.1046 15 21 14.1046 21 13V2C21 0.89543 20.1046 0 19 0Z" fill="white"/></mask><g mask="url(#mask0_45_683)"><path d="M19 0H2C0.89543 0 0 0.89543 0 2V13C0 14.1046 0.89543 15 2 15H19C20.1046 15 21 14.1046 21 13V2C21 0.89543 20.1046 0 19 0Z" fill="#DC220D"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10.502 9.33L8.41201 10.43L8.81201 8.103L7.12201 6.456L9.45801 6.116L10.502 4L11.547 6.116L13.882 6.456L12.192 8.103L12.592 10.429" fill="#FFFF00"/><path d="M19 0.5H2C1.17157 0.5 0.5 1.17157 0.5 2V13C0.5 13.8284 1.17157 14.5 2 14.5H19C19.8284 14.5 20.5 13.8284 20.5 13V2C20.5 1.17157 19.8284 0.5 19 0.5Z" stroke="black" stroke-opacity="0.1"/></g></g><defs><clipPath id="clip0_45_683"><rect width="21" height="15" fill="white"/></clipPath></defs></svg>'
-        var selectedLanguage = viLanguage.getAttribute("value");
-        getFlagBySelect(vnSVG, selectedAll?.[0])
-        updateContent(selectedLanguage);
-      });
 
-      cnLanguage.addEventListener("click", function () {
-        let cnSVG = '<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2_2819)"><g clip-path="url(#clip1_2_2819)"><rect width="22" height="16" rx="2" fill="#F93939"/><path d="M19.9048 0H2.09524C0.93807 0 0 0.955126 0 2.13333V13.8667C0 15.0449 0.93807 16 2.09524 16H19.9048C21.0619 16 22 15.0449 22 13.8667V2.13333C22 0.955126 21.0619 0 19.9048 0Z" fill="#F93939"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.75993 7.712L4.21993 8.53653L4.51326 6.7904L3.26869 5.55306L4.98993 5.30026L5.75993 3.71093L6.52888 5.30026L8.25012 5.55306L7.00345 6.7904L7.29888 8.53546L5.75993 7.712ZM9.42869 3.2H10.4763V4.26666H9.42869V3.2ZM10.4763 5.33333H11.5239V6.4H10.4763V5.33333ZM10.4763 7.46666H11.5239V8.53333H10.4763V7.46666ZM9.42869 9.6H10.4763V10.6667H9.42869V9.6Z" fill="#FFDA2C"/></g></g><defs><clipPath id="clip0_2_2819"><rect width="22" height="16" fill="white"/></clipPath><clipPath id="clip1_2_2819"><rect width="22" height="16" rx="2" fill="white"/></clipPath></defs></svg>'
-        var selectedLanguage = cnLanguage.getAttribute("value");
-        getFlagBySelect(cnSVG, selectedAll?.[0])
-        updateContent(selectedLanguage);
-      });
+    })
 
 
-      // Sử dụng sự kiện "input" để lắng nghe sự thay đổi liên tục của dropdown
-      languageSelect.addEventListener("input", function () {
-        var selectedLanguage = languageSelect.value;
-        updateContent(selectedLanguage);
-      });
 
-      updateContent(languageSelect.textContent.toLowerCase());
-    });
-
-
-      })
-    
-
-  
     // Chức năng tạo content bên tay trái
     $.getJSON("./assets/data/data.json", (temoins) => {
       const temoinContainer = document.getElementById("temoinContainer");
@@ -1188,4 +1110,5 @@ console.log(linesToScroll,"linesToScroll");
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
   <script defer src="./assets/js/gago.js" type="text/javascript"></script>
 </body>
+
 </html>
