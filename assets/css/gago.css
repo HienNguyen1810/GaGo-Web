@@ -856,6 +856,16 @@ html {
   }
   a button.link-view-more:hover svg path{
     stroke: floralwhite!important;
+   
+  }
+  a button.link-view-more svg path{
+    transition: all 0.5s ease-in-out;
+   
+   
+  }
+  a button.link-view-more:hover {
+    background-color: #161616!important;
+    stroke: floralwhite!important;
     transition: 0.5 ease;
   }
   .download-proposal,
@@ -2248,7 +2258,11 @@ html {
   }
   
 
-  
+  #backgroundTemoins{
+    background-size: cover;
+    background-repeat: no-repeat;
+      background-position: center; 
+  }
   .side.gauche.en-savoir-plus {
     background-color: var(--sombre);
     justify-content: flex-end;
@@ -3714,7 +3728,8 @@ margin-bottom: 22px;
     border-radius: 40px;
     text-align: center;
     background-color: #ffff;
-    border: 1px solid #161616;
+    /* border: 0.5px solid #161616; */
+    transition: all 0.5s ease-in-out;
     margin: auto;
   }
   .header-link,.contact-message,.btn {

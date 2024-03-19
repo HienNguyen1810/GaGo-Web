@@ -317,7 +317,7 @@
 
           </div>
 
-          <div class="selector-wrapper d-flex align-items-center" st>
+          <div class="selector-wrapper d-flex align-items-center" id="selectorWrapper">
             <svg class="arrow" width="21" height="15" viewBox="0 0 21 15" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_45_691)">
@@ -370,7 +370,7 @@
 
   <div class="w-layout-hflex flex-block">
 
-    <div class="side gauche">
+    <div class="side gauche" id="backgroundTemoins">
       <div class="social-mobile-1">
         <a href="https://www.behance.net/gagostudios" target="_blank" class="header-link"><img
             src="./assets/img/behance.svg" /></a>
@@ -624,7 +624,18 @@
                     });
 
 
+                    var element = document.getElementById('backgroundTemoins');
+                    var element1 = document.getElementById('selectorWrapper');
+                    var element2 = document.getElementById('languageSelect');
 
+                    const image = temoins[newCenterItemId - 1].image;
+                    const color1 = temoins[newCenterItemId - 1].btnView;
+                    const color2 = temoins[newCenterItemId - 1].itemColor;
+                    // Gán background image bằng cách sử dụng thuộc tính style.backgroundImage
+                    element.style.backgroundImage = `url('${image}') `;
+                     // Gán background color và color bằng cách sử dụng thuộc tính style.backgroundImage
+                     element1.style.cssText = `background-color: ${color2} !important;`;
+                     element2.style.cssText = `color: ${color1}!important;`;
 
                   }
                 }
@@ -1064,7 +1075,7 @@
         temoinDiv.className = temoin.class;
         temoinDiv.innerHTML = `
                 <div class="bloc-temoin bac3">
-                    <img src="${temoin.image}" loading="lazy" sizes="100vw" class="image-2" />
+            
                     <div class="bloc-text">
                         <div class="wrapper-btn-view-more">
                             <div class="row">
@@ -1074,10 +1085,10 @@
                                 </div>
                                 <div class="viewMore" style="text-align: right;">
                                     <a target="_blank" href="${temoin.link}">
-                                        <button class="btn-view-more link-view-more">
+                                        <button class="btn-view-more link-view-more" style="background-color: ${temoin.itemColor}; color: ${temoin.btnView};">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14.43 5.92993L20.5 11.9999L14.43 18.0699" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M3.5 12H20.33" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M14.43 5.92993L20.5 11.9999L14.43 18.0699" stroke="${temoin.btnView}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M3.5 12H20.33" stroke="${temoin.btnView}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg> <span class="view-more-content">View more</span>
                                         </button>
                                     </a>

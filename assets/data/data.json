@@ -7,8 +7,9 @@
     "title": "TERO",
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/192723993/MASCOT-3D-DESIGN-TERO",
-    "mainColor": "#004aad",
-    "itemColor": "rgb(0, 55, 128)",
+    "mainColor": "#20328d",
+    "itemColor": "rgb(44, 67, 186)",
+    "btnView": "#ffff",
     "gradientMobile": "linear-gradient(to Top, rgb(0, 74, 173,1),rgb(0, 74, 173, 0))"
 
   },
@@ -21,7 +22,8 @@
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/184295181/Mascot-Design-UNDERME",
     "mainColor": "#7b0b00",
-    "itemColor": "rgb(107, 14, 5)",
+    "itemColor": "rgb(179, 15, 0)",
+    "btnView": "#ffff",
     "gradientMobile": "linear-gradient(to Top, rgb(123, 11, 0,1),rgb(123, 11, 0,0))"
   },
   {
@@ -32,8 +34,9 @@
     "title": "MOPY",
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/184298395/Mascot-Design-MOPY",
-    "mainColor": "#004aad",
-    "itemColor": "rgb(0, 66, 153)",
+    "mainColor": "#b6d5f0",
+    "itemColor": "rgb(107, 170, 225)",
+    "btnView": "#333",
     "gradientMobile": "linear-gradient(to Top, rgb(0, 74, 173,1),rgb(0, 74, 173, 0))"
   },
   {
@@ -44,8 +47,9 @@
     "image": "./assets/img/03 CUPID.png",
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/185625807/Mascot-Design-CUPID",
-    "mainColor": "#d1544f",
-    "itemColor": "rgb(203, 57, 52)",
+    "mainColor": "#f9a22d",
+    "itemColor": "rgb(223, 129, 7)",
+    "btnView": "#ffff",
     "gradientMobile": "linear-gradient(to Top, rgb(209, 84, 79,1),rgb(209, 84, 79, 0))"
   },
   {
@@ -56,8 +60,9 @@
     "image": "./assets/img/04 DREAM BABY.png",
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/189081627/MASCOT-DESIGN-DREAM-BABY",
-    "mainColor": "#253e9f",
-    "itemColor": "rgb(44, 72, 186)",
+    "mainColor": "#6b9540",
+    "itemColor": "rgb(102, 143, 61)",
+    "btnView": "#ffff",
     "gradientMobile": "linear-gradient(to Top, rgb(37, 62, 159,1),rgb(37, 62, 159, 0))"
   },
   {
@@ -68,8 +73,9 @@
     "image": "./assets/img/10 TIBI.png",
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/187498461/MASCOT-DESIGN-TIBI",
-    "mainColor": "#78a255",
-    "itemColor": "rgb(113, 156, 78)",
+    "mainColor": "#89b164",
+    "itemColor": "rgb(113, 153, 77)",
+    "btnView": "#ffff",
     "gradientMobile": "linear-gradient(to Top, rgb(120, 162, 85,1),rgb(120, 162, 85, 0))"
   },
   {
@@ -77,11 +83,12 @@
     "idContent": "riceBabyContent",
     "class": "temoin",
     "title": "RICE BABY",
-    "image": "./assets/img/11 RICE BABY.gif",
+    "image": "./assets/img/11 RICE BABY.png",
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/187349915/MASCOT-DESIGN-RICE-BABY",
     "mainColor": "#c2a16a",
-    "itemColor": "rgb(191, 155, 96)",
+    "itemColor": "rgb(163, 128, 67)",
+    "btnView": "#ffff",
     "gradientMobile": "linear-gradient(to Top, rgb(194, 161, 106,1),rgb(194, 161, 106, 0))"
   },
   {
@@ -93,7 +100,8 @@
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/188005575/MASCOT-DESIGN-ANTA",
     "mainColor": "#c41a21",
-    "itemColor": "rgb(181, 22, 28)",
+    "itemColor": "rgb(181, 23, 29)",
+    "btnView": "#ffff",
     "gradientMobile": "linear-gradient(to Top, rgb(196, 26, 33,1),rgb(196, 26, 33, 0))"
   },
   {
@@ -104,8 +112,9 @@
     "image": "./assets/img/13 SILVER TIGER & PEONY.png",
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/190279123/MASCOT-DESIGN-SILVER-TIGER-PEONY",
-    "mainColor": "#42a3cb",
-    "itemColor": "rgb(49, 141, 180)",
+    "mainColor": "#04647b",
+    "itemColor": "rgb(5, 140, 173)",
+    "btnView": "#ffff",
     "gradientMobile": "linear-gradient(to Top, rgb(66, 163, 203,1),rgb(66, 163, 203, 0))"
   },
   {
@@ -116,8 +125,9 @@
     "image": "./assets/img/17 GH CREATION.png",
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/184298395/Mascot-Design-MOPY",
-    "mainColor": "#5ba5f0",
-    "itemColor": "rgb(80, 154, 230)",
+    "mainColor": "#004aad",
+    "itemColor": "rgb(0, 99, 230)",
+    "btnView": "#ffff",
     "gradientMobile": "linear-gradient(to Top, rgb(91, 165, 240,1),rgb(91, 165, 240, 0))"
   },
   {
@@ -129,7 +139,8 @@
     "content": "Lorem ipsum dolor sit amet",
     "link": "https://www.behance.net/gallery/188584797/Sticker-Pack-for-PIPPY",
     "mainColor": "#f9a22d",
-    "itemColor": "rgb(230, 149, 41)",
+    "itemColor": "rgb(223, 129, 7)",
+    "btnView": "#ffff",
     "gradientMobile": "linear-gradient(to Top, rgb(249, 162, 45,1),rgb(249, 162, 45, 0))"
   }
 ]
