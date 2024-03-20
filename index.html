@@ -431,6 +431,8 @@
         </div>
         <script>
           document.addEventListener("DOMContentLoaded", () => {
+            $.getJSON("./assets/data/data.json", (temoins) => {
+                
             let isInitItem = null;
             let isScrolling = false;
 
@@ -753,6 +755,7 @@
               });
             };
             setTimeout(initialAutoScroll, 100);
+            })
           });
         </script>
       </div>
