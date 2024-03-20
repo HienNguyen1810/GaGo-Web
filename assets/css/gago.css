@@ -2474,7 +2474,7 @@ html {
     color: var(--sombre);
     margin-bottom: 2%;
     font-family: inter;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.4;
     display: block;
@@ -3301,8 +3301,8 @@ margin-bottom: 22px;
       color: var(--blanc);
       padding-left: 5vw;
       padding-right: 5vw;
-      font-size: 13px;
-      line-height: 100%;
+      font-size: 16px;
+      line-height: 1.4;
       display: block;
     }
   
@@ -3729,7 +3729,7 @@ margin-bottom: 22px;
     text-align: center;
     background-color: #ffff;
     /* border: 0.5px solid #161616; */
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
     margin: auto;
   }
   .header-link,.contact-message,.btn {
