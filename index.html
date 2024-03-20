@@ -622,20 +622,22 @@
                       element.style.cssText = `background: ${color} !important`;
 
                     });
-
+                    var backgroundImages = temoins.map(function (temoin) {
+                      return temoin.image;
+                    });
 
                     var element = document.getElementById('backgroundTemoins');
                     var element1 = document.getElementById('selectorWrapper');
                     var element2 = document.getElementById('languageSelect');
 
-                    const image = temoins[newCenterItemId - 1].image;
+                    const image = backgroundImages[newCenterItemId - 1];
                     const color1 = temoins[newCenterItemId - 1].btnView;
                     const color2 = temoins[newCenterItemId - 1].itemColor;
                     // Gán background image bằng cách sử dụng thuộc tính style.backgroundImage
                     element.style.backgroundImage = `url('${image}') `;
-                     // Gán background color và color bằng cách sử dụng thuộc tính style.backgroundImage
-                     element1.style.cssText = `background-color: ${color2} !important;`;
-                     element2.style.cssText = `color: ${color1}!important;`;
+                    // Gán background color và color bằng cách sử dụng thuộc tính style.backgroundImage
+                    element1.style.cssText = `background-color: ${color2} !important;`;
+                    element2.style.cssText = `color: ${color1}!important;`;
 
                   }
                 }
