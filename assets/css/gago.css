@@ -2470,7 +2470,7 @@ html {
 
   
   .texte-temoin {
-   
+    text-align: justify;
     color: var(--sombre);
     margin-bottom: 2%;
     font-family: inter;
