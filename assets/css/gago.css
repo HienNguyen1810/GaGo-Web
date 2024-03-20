@@ -247,8 +247,8 @@ html {
     display: inline-block;
   }
   .close-contact-img{
-    width: 64px;
-    height:64px;
+    width: 40px;
+    height:40px;
     max-width: none!important;
   }
   .social-mobile-1{
@@ -1040,7 +1040,7 @@ html {
   
   @media screen and (max-width: 479px) {
     .contact-social-list{
-    right: 26px !important;
+    right: 38px  !important;
     bottom: 100px !important;
     gap: 0px !important;
     }
@@ -3751,7 +3751,7 @@ margin-bottom: 22px;
   }
   .contact-social-list{
     position: fixed;
-    right: 42px;
+    right: 57px;
     bottom: 107px;
     display: flex;
     flex-direction: column;
