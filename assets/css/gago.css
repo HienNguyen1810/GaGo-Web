@@ -7,7 +7,7 @@ html {
   body {
     margin: 0;
   }
-  
+
   article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
   }
@@ -105,7 +105,7 @@ html {
   
   button, input, optgroup, select, textarea {
     color: inherit;
-    font: inherit;
+    font-family: Inter!important;
     margin: 0;
   }
   
@@ -186,6 +186,12 @@ html {
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: brl;
+    src:url('../font/brlnsdb.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+   }
   
   [class^="w-icon-"], [class*=" w-icon-"] {
     speak: none;
@@ -236,7 +242,7 @@ html {
     color: #333;
     background-color: #fff;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Brl;
     font-size: 14px;
     line-height: 20px;
   }
@@ -2339,7 +2345,7 @@ html {
     color: #fff;
     text-decoration: none;
     display: inline;
-    font-family: Inter;
+    font-family: brl;
     font-weight: bold;
   }
   
@@ -2463,7 +2469,7 @@ html {
   .titre-temoin.black {
     color: var(--sombre);
     font-size: 30px;
-    font-family: Inter;
+    font-family: brl;
     font-weight: 700
     ;
   }
@@ -2477,7 +2483,7 @@ html {
     display: none;
   }
   .spinner-container p{
-    font-family: Inter;
+    font-family: brl;
     font-size: 18px;
     font-weight: 700;
     color:#282664;
@@ -2510,7 +2516,7 @@ html {
     text-align: justify;
     color: var(--sombre);
     margin-bottom: 2%;
-    font-family: inter;
+    font-family: Inter;
     font-size: 24px;
     font-weight: 500;
     line-height: 1.4;
@@ -2749,7 +2755,7 @@ html {
     background-color: rgba(56, 152, 236, 0);
     margin-top: 5vh;
     padding: 0;
-    font-family: Montserrat, sans-serif;
+    font-family: brl;
     font-size: 1.3vw;
     font-weight: 700;
     position: static;
@@ -3059,7 +3065,7 @@ margin-bottom: 22px;
   }
   .font{
     text-align: center;
-    font-family: inter;
+    font-family: brl;
     font-size: 14px;
     font-weight: 500;
   }
@@ -3770,6 +3776,7 @@ margin-bottom: 22px;
   }
   .header-link,.contact-message,.btn {
    transition:0.3s ease! important;
+   font-family: Inter!important;
   }
   .contact-message{
     position: fixed;
@@ -3843,7 +3850,7 @@ margin-bottom: 22px;
     color: #f5f6fa;
     position: relative;
 font-size: 14px;
-font-family: inter;
+font-family: Inter;
   text-align: center;
     order: 0;
 
@@ -3959,10 +3966,7 @@ font-family: inter;
     cursor: pointer;
   }
   
-  .selected {
-    /* padding: 8px 12px 8px 28px;
-    float: left; */
-  }
+
   
   .select-box .option:hover {
     background: #333;
@@ -3977,7 +3981,7 @@ font-family: inter;
     padding-left: 16px;
     padding-right: 16px;
     font-size: 14px;
-    font-family: Inter;
+    font-family: brl;
     font-weight: 500!important;
   }
   
@@ -4009,7 +4013,7 @@ font-family: inter;
     padding: 10px;
     /* border-radius: 10px; */
     font-size: 14px;
-    font-family: inter;
+    font-family: brl;
     font-weight: 500! important;
   }
   
