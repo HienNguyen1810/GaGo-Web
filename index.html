@@ -1170,22 +1170,29 @@
       showSpinner()
     }
     document.addEventListener('DOMContentLoaded', function () {
-      coverBody.style.display = 'none';
-      btnLanguage.style.display = 'none';
-      logo.style.display = 'none';
-      header.style.display = 'none';
-      // Ẩn spinner khi DOM đã được tải
-      if (document.readyState === "complete") { hideSpinner() }
-
-    });
+  // Ẩn các phần tử sau 0.5 giây
+  setTimeout(function() {
+    coverBody.style.display = 'none';
+    btnLanguage.style.display = 'none';
+    logo.style.display = 'none';
+    header.style.display = 'none';
+    // Ẩn spinner khi DOM đã được tải
+    if (document.readyState === "complete") { 
+      hideSpinner();
+    }
+  }, 1000);
+});
 
     window.addEventListener('load', function () {
-      coverBody.style.display = 'none';
-      btnLanguage.style.display = 'none';
-      logo.style.display = 'none';
-      header.style.display = 'none';
+
       // Ẩn spinner khi toàn bộ tài nguyên (bao gồm cả JavaScript) đã được tải
-      if (document.readyState === "complete") { hideSpinner() }
+      setTimeout(function() {
+
+    // Ẩn spinner khi DOM đã được tải
+    if (document.readyState === "complete") { 
+      hideSpinner();
+    }
+  }, 1000);
 
     });
 
