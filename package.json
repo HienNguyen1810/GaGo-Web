@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-pngquant": "^9.0.2"
+  }
+}
